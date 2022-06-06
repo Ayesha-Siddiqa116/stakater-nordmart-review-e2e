@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "outDir": ".dist",
+      "target": "ES6",
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "noImplicitAny": false,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strictPropertyInitialization": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "types": [
+        "node"
+      ],
+    },
+    "include": [
+      "src/runner.ts",
+      "src/cleanup.ts",
+      "src/**/*.cafe.ts"
+    ],
+  }

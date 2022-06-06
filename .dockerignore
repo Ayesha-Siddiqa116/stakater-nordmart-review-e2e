@@ -1,0 +1,7 @@
+.*
+!.npmrc
+Dockerfile*
+Jenkinsfile*
+node_modules
+coverage
+.recordings

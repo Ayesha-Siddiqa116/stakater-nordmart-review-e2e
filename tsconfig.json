@@ -21,6 +21,6 @@
     "include": [
       "src/runner.ts",
       "src/cleanup.ts",
-      "src/**/*.cafe.ts"
+      "**/*.cafe.ts"
     ],
   }

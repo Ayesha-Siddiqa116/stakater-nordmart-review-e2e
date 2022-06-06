@@ -7,7 +7,7 @@ const ffmpeg = require("@ffmpeg-installer/ffmpeg");
 const CONFIGS = {
     ci: {
         host: "https://review-web-gabbar-dev.apps.devtest.vxdqgl7u.kubeapp.cloud",
-        browsers: "chrome:headless",
+        browsers: "chromium:headless",
         concurrency: 3,
         selectorTimeout: 30000,
         assertionTimeout: 30000,
@@ -28,7 +28,7 @@ const CONFIGS = {
         browsers: "chrome:headless",
         concurrency: 5,
         selectorTimeout: 30000,
-        assertionTimeout: 10000,
+        assertionTimeout: 5000,
         quarantineMode: false,
         videos: {
             failedOnly: true,
@@ -74,7 +74,6 @@ const CONFIGS = {
             quarantineMode: testConf.quarantineMode,
             pageLoadTimeout: 10000,
             debugMode: false,
-          skipJsErrors: true
         })
         .then((failedCount) => {
             testCafe.close();

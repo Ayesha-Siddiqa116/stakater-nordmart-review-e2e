@@ -1,0 +1,38 @@
+{
+  "name": "review-ui-e2e",
+  "version": "1.0.0",
+  "description": "End to end testing for review-ui",
+  "author": "Quang Vu",
+  "private": "true",
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/testcafe": "^4.4.1"
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@types/lodash": "^4.14.182",
+    "@types/moment-timezone": "^0.5.30",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "axios": "^0.27.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-no-only-tests": "^2.6.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-testing-library": "^4.11.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.3",
+    "moment-timezone": "^0.5.34",
+    "testcafe": "^1.19.0",
+    "testcafe-reporter-spec-time": "^4.0.0",
+    "zlib": "^1.0.5"
+  },
+  "scripts": {
+    "build": "rm -rf .dist && tsc -p tsconfig.json",
+    "start": "rm -rf .reports && npm run build && node .dist/runner.js",
+    "cleanup": "node dist/cleanup.js"
+  }
+}

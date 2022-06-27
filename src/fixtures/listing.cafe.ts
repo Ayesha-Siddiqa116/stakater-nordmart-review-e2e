@@ -159,11 +159,11 @@ test("should show all reviews", async t => {
             "comment": "Cool enough+for+summer+warm+enough+for+winter",
             "rating": "4 Stars"
           },
-          {
-            "name": "John Doe",
-            "comment": "Very good stuff",
-            "rating": "4 Stars"
-          },
+          // {
+          //   "name": "John Doe",
+          //   "comment": "Very good stuff",
+          //   "rating": "4 Stars"
+          // },
         ]
       },
       {

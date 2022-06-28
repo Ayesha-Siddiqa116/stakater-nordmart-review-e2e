@@ -7,7 +7,7 @@ const ffmpeg = require("@ffmpeg-installer/ffmpeg");
 const CONFIGS = {
     ci: {
         host: "https://review-web-gabbar-dev.apps.devtest.vxdqgl7u.kubeapp.cloud",
-        browsers: "chromium:headless",
+        browsers: "chromium --headless --no-sandbox --disable-dev-shm-usage",
         concurrency: 3,
         selectorTimeout: 30000,
         assertionTimeout: 30000,

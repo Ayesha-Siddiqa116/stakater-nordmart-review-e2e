@@ -39,10 +39,13 @@ const CONFIGS = {
 };
 
 (async () => {
-    const [, , environment, concurrency, browser] = process.argv;
+    const [, , environment, url ,concurrency, browser] = process.argv;
     const testConf = CONFIGS[environment];
-
-    process.env.TEST_URL = testConf.host;
+    if (url) {
+        process.env.TEST_URL = url;
+    } else {
+        process.env.TEST_URL = testConf.host;
+    }
     logger("Started tests for: ", `${environment}: ${process.env.TEST_URL}`);
 
     logger("System timezone: ", moment.tz.guess());

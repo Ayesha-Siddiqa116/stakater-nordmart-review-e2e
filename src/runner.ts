@@ -9,6 +9,7 @@ const CONFIGS = {
         host: "https://review-web-gabbar-dev.apps.devtest.vxdqgl7u.kubeapp.cloud",
         browsers: "chrome:headless",
         concurrency: 3,
+        browserInitTimeout: 180,
         selectorTimeout: 30000,
         assertionTimeout: 30000,
         quarantineMode: true,

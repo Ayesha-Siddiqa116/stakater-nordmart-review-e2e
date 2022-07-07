@@ -14,7 +14,7 @@ RUN npm install
 RUN dnf remove unzip -y && \
     dnf clean all && \
     rm -rf /var/cache/* && \
-    rm -rf node_modules/* \
+    rm -rf node_modules/* 
 
 USER 1001
 

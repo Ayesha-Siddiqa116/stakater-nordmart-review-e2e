@@ -2,7 +2,7 @@ import {fixture} from "testcafe";
 import {SelectSnapshot} from "../dom-snapshot";
 
 fixture("This is a test suite").beforeEach(async t => {
-  await t.navigateTo("https://review-web-gabbar-dev.apps.devtest.vxdqgl7u.kubeapp.cloud");
+  await t.navigateTo(process.env.TEST_URL);
 })
 
 test("should list all products", async t => {
@@ -10,7 +10,7 @@ test("should list all products", async t => {
     "products": [
       {
         "banner": {
-          "url": "https://review-web-gabbar-dev.apps.devtest.vxdqgl7u.kubeapp.cloud/3bba74379deaf954beb755de357da03e.j"
+          "url": `${process.env.TEST_URL}/3bba74379deaf954beb755de357da03e.jpg`
         },
         "title": {
           "text": "Forge Laptop Sticker"
@@ -23,7 +23,7 @@ test("should list all products", async t => {
       },
       {
         "banner": {
-          "url": "https://review-web-gabbar-dev.apps.devtest.vxdqgl7u.kubeapp.cloud/768473f4c2d067b7a046cbcee562ce41.j"
+          "url": `${process.env.TEST_URL}/768473f4c2d067b7a046cbcee562ce41.jpg`
         },
         "title": {
           "text": "Solid Performance Polo"
@@ -36,7 +36,7 @@ test("should list all products", async t => {
       },
       {
         "banner": {
-          "url": "https://review-web-gabbar-dev.apps.devtest.vxdqgl7u.kubeapp.cloud/d1256eed062389d6ea00c737a4d1475b.j"
+          "url": `${process.env.TEST_URL}/d1256eed062389d6ea00c737a4d1475b.jpg`
         },
         "title": {
           "text": "Ogio Caliber Polo"
@@ -49,7 +49,7 @@ test("should list all products", async t => {
       },
       {
         "banner": {
-          "url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxEREBUTEhIWFhUTGBYWFRISEhUVFRISFxcWFhcRF"
+          "url": `${process.env.TEST_URL}/d2eefe9e49d26d16de7f77308d9d9761.jpg`
         },
         "title": {
           "text": "16 oz. Vortex Tumbler"
@@ -62,7 +62,7 @@ test("should list all products", async t => {
       },
       {
         "banner": {
-          "url": "https://review-web-gabbar-dev.apps.devtest.vxdqgl7u.kubeapp.cloud/a7b6cc5cede091baeddca7bd4f48bd03.j"
+          "url": `${process.env.TEST_URL}/a7b6cc5cede091baeddca7bd4f48bd03.jpg`
         },
         "title": {
           "text": "Pebble Smart Watch"
@@ -75,7 +75,7 @@ test("should list all products", async t => {
       },
       {
         "banner": {
-          "url": "https://review-web-gabbar-dev.apps.devtest.vxdqgl7u.kubeapp.cloud/ecce27d320faedbc57f033ef5825cf47.j"
+          "url": `${process.env.TEST_URL}/ecce27d320faedbc57f033ef5825cf47.jpg`
         },
         "title": {
           "text": "Oculus Rift"
@@ -88,7 +88,7 @@ test("should list all products", async t => {
       },
       {
         "banner": {
-          "url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgS"
+          "url": `${process.env.TEST_URL}/91f8b568f7ebdbcfef887f301ae6456e.jpg`
         },
         "title": {
           "text": "Lytro Camera"
@@ -109,7 +109,7 @@ test("should list all products", async t => {
     name: "banner",
     cssSelector: "img",
     contentAttrs: {
-      url: (img: HTMLImageElement) => img.src?.substring(0, 100)
+      url: (img: HTMLImageElement) => img.src
     }
   }, {
     name: "title",

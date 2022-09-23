@@ -8,7 +8,7 @@ const CONFIGS = {
   ci: {
     host: process.env.TEST_URL,
     browsers: "chromium --headless --no-sandbox --disable-dev-shm-usage",
-    concurrency: 3,
+    concurrency: 1,
     browserInitTimeout: 180,
     selectorTimeout: 30000,
     assertionTimeout: 30000,
